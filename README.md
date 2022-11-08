@@ -1,5 +1,5 @@
 ## Cryptocurrency-tracker
-Cryptocurrency current market price tracker app 
+It demonstrate how to use retrofit using coinmarketcap api and how to show data using recyclerview 
 
 ## Screenshot
 <img src="https://raw.githubusercontent.com/aman043358sagar/Cryptocurrency-tracker/master/screenshot/Cryptocurrency%20tracker%20app%20screenshot.jpg" width="246" height="438">
