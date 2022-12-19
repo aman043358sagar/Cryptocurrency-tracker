@@ -4,7 +4,7 @@ import java.util.ArrayList
 
 
 class DataModel(
-    val data: ArrayList<DataCrypto>
+    val data: List<DataCrypto>
 )
 
 class DataCrypto(

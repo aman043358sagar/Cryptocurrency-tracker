@@ -20,15 +20,14 @@ class MainActivity : AppCompatActivity() {
         rcv.layoutManager = LinearLayoutManager(this)
 
 
-        val retrofitBuilder = Retrofit.Builder()
+        val call = Retrofit.Builder()
             .addConverterFactory(GsonConverterFactory.create())
             .baseUrl("https://pro-api.coinmarketcap.com/")
             .build()
             .create(MyAPICall::class.java)
+            .call
 
-        val retrofitData = retrofitBuilder.getData()
-
-        retrofitData.enqueue(object : Callback<DataModel?> {
+        call.enqueue(object : Callback<DataModel?> {
             override fun onResponse(call: Call<DataModel?>, response: Response<DataModel?>) {
                 val dataModel = response.body()!!
 
