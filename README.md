@@ -2,7 +2,7 @@
 It demonstrate how to use retrofit using coinmarketcap api and how to show data using recyclerview 
 
 ## Screenshot
-<img src="https://raw.githubusercontent.com/aman043358sagar/Cryptocurrency-tracker/master/screenshot/Cryptocurrency%20tracker%20app%20screenshot.jpg" width="246" height="438">
+<img src="https://gitlab.com/aman043358sagar/Cryptocurrency-tracker/-/raw/master/screenshot/Cryptocurrency%20tracker%20app%20screenshot.jpg" width="246" height="438">
 
 
 ## The topics given below should be known in advance for this project
