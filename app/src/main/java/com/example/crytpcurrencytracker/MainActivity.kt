@@ -1,9 +1,9 @@
 package com.example.crytpcurrencytracker
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
+import com.example.crytpcurrencytracker.databinding.ActivityMainBinding
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -11,13 +11,15 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 class MainActivity : AppCompatActivity() {
+
+    lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        var rcv: RecyclerView = findViewById(R.id.rclview)
 
-        rcv.layoutManager = LinearLayoutManager(this)
+        binding.rclview.layoutManager = LinearLayoutManager(this)
 
 
         val call = Retrofit.Builder()
@@ -31,7 +33,7 @@ class MainActivity : AppCompatActivity() {
             override fun onResponse(call: Call<DataModel?>, response: Response<DataModel?>) {
                 val dataModel = response.body()!!
 
-                rcv.adapter = MyAdapter(dataModel)
+                binding.rclview.adapter = MyAdapter(dataModel)
             }
 
             override fun onFailure(call: Call<DataModel?>, t: Throwable) {
